@@ -1,52 +1,14 @@
 [
     {
-        "id": 1752723106290,
-        "title": "美国解禁H20芯片深层原因 白宫AI主管：打压华为",
-        "url": "https://news.mydrivers.com/1/1062/1062429.htm",
-        "category": "科技",
-        "source": "",
-        "description": "",
-        "createTime": "2025-07-17T03:31:46.290Z",
-        "updateTime": "2025-07-17T03:31:46.290Z"
-    },
-    {
-        "id": 1752723019546,
-        "title": "如何开启聊天分组？",
-        "url": "http://www.aliwork.com",
-        "category": "科技",
-        "source": "",
-        "description": "",
-        "createTime": "2025-07-17T03:30:19.546Z",
-        "updateTime": "2025-07-17T03:30:19.546Z"
-    },
-    {
-        "id": 1752722984388,
         "title": "钉钉AI助理新功能发布",
-        "url": "https://www.baidu.com",
-        "category": "其他",
-        "source": "",
-        "description": "",
-        "createTime": "2025-07-17T03:29:44.388Z",
-        "updateTime": "2025-07-17T03:29:44.388Z"
+        "url": "https://example.com/news1"
     },
     {
-        "id": 1752722984389,
         "title": "企业智能客服解决方案升级",
-        "url": "https://example.com/news2",
-        "category": "其他",
-        "source": "",
-        "description": "",
-        "createTime": "2025-07-17T03:29:44.388Z",
-        "updateTime": "2025-07-17T03:29:44.388Z"
+        "url": "https://example.com/news2"
     },
     {
-        "id": 1752722984390,
         "title": "AI助力数字化转型案例分享",
-        "url": "https://example.com/news3",
-        "category": "其他",
-        "source": "",
-        "description": "",
-        "createTime": "2025-07-17T03:29:44.388Z",
-        "updateTime": "2025-07-17T03:29:44.388Z"
+        "url": "https://example.com/news3"
     }
 ]
