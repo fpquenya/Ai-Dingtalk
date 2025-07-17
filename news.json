@@ -1,14 +1,30 @@
 [
     {
+        "id": 1752734724702,
+        "title": "Assistant API 调用流程",
+        "url": "https://open.dingtalk.com/document/orgapp/assistantapi-call-process",
+        "createTime": "2025-07-17T06:45:24.702Z",
+        "updateTime": "2025-07-17T06:45:24.702Z"
+    },
+    {
+        "id": 1752734707670,
         "title": "钉钉AI助理新功能发布",
-        "url": "https://example.com/news1"
+        "url": "https://example.com/news1",
+        "createTime": "2025-07-17T14:45:07.670610",
+        "updateTime": "2025-07-17T14:45:07.670614"
     },
     {
+        "id": 1752734707671,
         "title": "企业智能客服解决方案升级",
-        "url": "https://example.com/news2"
+        "url": "https://example.com/news2",
+        "createTime": "2025-07-17T14:45:07.670617",
+        "updateTime": "2025-07-17T14:45:07.670618"
     },
     {
+        "id": 1752734707672,
         "title": "AI助力数字化转型案例分享",
-        "url": "https://example.com/news3"
+        "url": "https://example.com/news3",
+        "createTime": "2025-07-17T14:45:07.670620",
+        "updateTime": "2025-07-17T14:45:07.670621"
     }
 ]
