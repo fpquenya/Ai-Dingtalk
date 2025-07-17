@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  dingtalk-news:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./news.json:/app/news.json
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    container_name: dingtalk-news-app
+    networks:
+      - dingtalk-network
+
+networks:
+  dingtalk-network:
+    driver: bridge

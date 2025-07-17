@@ -215,8 +215,11 @@ class NewsHandler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
 if __name__ == '__main__':
-    server = HTTPServer(('127.0.0.1', 8000), NewsHandler)
-    print('启动服务器在 http://127.0.0.1:8000')
+    # 在Docker容器中使用0.0.0.0以允许外部访问
+    host = '0.0.0.0'
+    port = 8000
+    server = HTTPServer((host, port), NewsHandler)
+    print(f'启动服务器在 http://{host}:{port}')
     try:
         server.serve_forever()
     except KeyboardInterrupt:

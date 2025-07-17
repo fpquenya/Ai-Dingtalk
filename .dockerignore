@@ -1,0 +1,42 @@
+# Git相关文件
+.git
+.gitignore
+
+# Python缓存文件
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache
+
+# 虚拟环境
+venv
+env
+.venv
+.env
+
+# IDE文件
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+*.tmp
+*.temp
+
+# 文档文件
+README.md
+*.md
+
+# Docker相关文件
+Dockerfile
+docker-compose.yml
+.dockerignore
