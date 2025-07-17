@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>钉钉AI助理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: auto;
+            background-color: #f7f9fc;
+            padding-bottom: 20px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #2B7BFF;
+            color: white;
+            position: relative;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(43, 123, 255, 0.2);
+        }
+        #ai-container {
+            height: calc(100vh - 350px);
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        #news-container {
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+            margin: 20px auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+        #news-container h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2B7BFF;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f0f3f9;
+        }
+        #news-list {
+            max-height: 200px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        #news-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        #news-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        #news-list::-webkit-scrollbar-thumb {
+            background: #2B7BFF;
+            border-radius: 4px;
+        }
+        .news-item {
+            display: block;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.3s ease;
+            background-color: #f7f9fc;
+        }
+        .news-item:last-child {
+            margin-bottom: 0;
+        }
+        .news-item:hover {
+            background-color: #e8f0fe;
+            color: #2B7BFF;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="ai-container">
+        <iframe 
+            src="https://agent.dingtalk.com/copilot?code=QJ8pQxXBc3" 
+            style="width: 100%; height: 100%; min-height: 100%"
+            frameborder="0"
+            allow="microphone">
+        </iframe>
+    </div>
+
+    <div id="news-container">
+        <h2>最新动态</h2>
+        <div id="news-list"></div>
+    </div>
+
+    <script>
+        // 加载新闻列表
+        function loadNews() {
+            fetch('news.json')
+                .then(response => response.json())
+                .then(news => {
+                    const newsList = document.getElementById('news-list');
+                    newsList.innerHTML = '';
+                    news.forEach(item => {
+                        const newsItem = document.createElement('a');
+                        newsItem.href = item.url;
+                        newsItem.target = '_blank';
+                        newsItem.className = 'news-item';
+                        newsItem.textContent = item.title;
+                        newsList.appendChild(newsItem);
+                    });
+                })
+                .catch(error => console.error('加载新闻失败:', error));
+        }
+
+        // 页面加载时加载新闻
+        window.onload = function() {
+            loadNews();
+        };
+    </script>
+</body>
+</html>
